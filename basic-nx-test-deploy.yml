@@ -21,6 +21,6 @@ deploy:
   stage: deploy
   extends: .prepare_nx_affected
   script:
-    - npm run publish
+    - npm run publish -- $NX_BASE_ARGS
   rules:
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
