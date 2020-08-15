@@ -1,4 +1,5 @@
-include: "/default-merge-js.yml"
+include:
+  remote: "https://github.com/myin142/gitlab-templates/raw/master/default-merge-js.yml"
 
 test:
   stage: test
