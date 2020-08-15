@@ -1,0 +1,12 @@
+include: "/default-merge-js.yml"
+
+test:
+  stage: test
+  extends: .prepare_nx_affected
+  script:
+    - npm test -- $NX_BASE_ARGS
+lint:
+  stage: test
+  extends: .prepare_nx_affected
+  script:
+    - npm run lint -- $NX_BASE_ARGS
